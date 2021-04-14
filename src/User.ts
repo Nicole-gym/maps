@@ -3,14 +3,14 @@ import faker from 'faker';
 export class User {
   name: string;
   location: {
-    lag: number;
+    lat: number;
     lng: number;
   };
 
   constructor() {
     this.name = faker.name.findName();
     this.location = {
-      lag : parseFloat(faker.address.latitude()),
+      lat : parseFloat(faker.address.latitude()),
       lng : parseFloat(faker.address.longitude())
     };
   }
